@@ -4,13 +4,9 @@
     <header class="header-main">
         {% block base_header_inner %}
             <div class="top-nav-bg">
-                <div class="container">
-                    {% sw_include '@Storefront/storefront/layout/header/top-bar.html.twig' %}
-                </div>
+                {% sw_include '@Storefront/storefront/layout/header/top-bar.html.twig' %}
             </div>
-            <div class="container">
-                {% sw_include '@Storefront/storefront/layout/header/header.html.twig' %}
-            </div>
+            {% sw_include '@Storefront/storefront/layout/header/header.html.twig' %}
         {% endblock %}
     </header>
 {% endblock %}

@@ -1,18 +1,19 @@
 {% block header_head_nav %}
-    <div class="d-none d-md-flex justify-content-between">
-        <div>Compare</div>
-        <ul class="d-flex">
-            <li class="mr-1">DEFAULT WELCOME MSG!</li>
-            <li class="mr-1"><a href="">CONTACT US</a></li>
-            <li class="mr-1"><a href="">BLOG</a></li>
-            <li class="mr-1"><a href="">SIGN IN</a></li>
-            <li><a href="">CREATE AN ACCOUNT</a></li>
+    <div class="container d-none d-md-flex justify-content-between emz_head_nav_wrapper">
+        {% sw_include '@MarkusTheme/storefront/layout/header/emz_compare.html.twig' %}
+        <ul class="d-flex m-0">
+            <li class="emz_head_nav_items">DEFAULT WELCOME MSG!</li>
+            <li class="emz_head_nav_items"><a href="">CONTACT US</a></li>
+            <li class="emz_head_nav_items"><a href="">BLOG</a></li>
+            <li class="emz_head_nav_items"><a href="">SIGN IN</a></li>
+            <li class="emz_head_nav_items"><a href="">CREATE AN ACCOUNT</a></li>
         </ul>
     </div>
 {% endblock %}
 
 {% block header_mid_nav %}
-    <div class="d-flex justify-content-between align-items-center my-5">
+    <div class="emz_sepline"></div>
+    <div class="container d-flex justify-content-between align-items-center my-4">
         <div class="col-md-4 p-0 d-none d-md-block">
             {% sw_include '@MarkusTheme/storefront/layout/header/emz_curr_lang_switch.html.twig' %}
         </div>
@@ -30,10 +31,11 @@
             {% sw_include '@MarkusTheme/storefront/layout/header/emz_shopping_cart.html.twig' %}
         </div>
     </div>
+    <div class="emz_sepline"></div>
 {% endblock %}
 
 {% block header_bot_nav %}
-    <div class="d-none d-md-flex justify-content-between align-items-center position-relative">
+    <nav class="container d-none d-md-flex justify-content-between align-items-center sticky-top">
         <ul class="d-flex m-0 p-0">
             <li class="emz_menu_item"><a href="#" class="text-uppercase pl-1 pr-2">home</a></li>
             <li class="dropdown emz_menu_item">
@@ -153,5 +155,5 @@
             <li class="emz_menu_item"><a href="#" class="text-uppercase pl-1 pr-2">buy porto!</a></li>
         </ul>
         <span>{% sw_include '@MarkusTheme/storefront/layout/header/emz_shopping_cart.html.twig' %}</span>
-    </div>
+    </nav>
 {% endblock %}
