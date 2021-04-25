@@ -97,11 +97,12 @@
         background-color: inherit;
         color: #4a4a4a;
         font-weight: 600;
+        padding: 1px 35px 1px 2px;
     }
 }
 
 .emz_menu_item {
-    margin-right: 4px;
+    margin-right: 15px;
     color: #111;
     font-size: 13px;
     font-family: "Oswald", sans-serif;
@@ -109,6 +110,44 @@
     line-height: 46px;
 }
 
+.emz_menu_item a:first-child {
+    padding-left: 0 !important;
+}
+
 .emz_menu_item:last-child {
     margin-right: 0;
+}
+
+.emz_topbar_item {
+    margin-right: 30px;
+}
+
+.emz_topbar_item:last-child {
+    margin-right: 0;
+}
+
+.emz_head_nav_wrapper {
+    padding-top: 10px;
+    padding-bottom: 11px;
+    color: #4A4A4A;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.275px;
+    line-height: 15.4px;
+    text-transform: uppercase;
+}
+
+.emz_head_nav_items {
+    padding: 0 15px;
+}
+
+.emz_head_nav_items:first-child {
+    padding-left: 0;
+}
+.emz_head_nav_items:last-child {
+    padding-right: 0;
+}
+
+.emz_sepline {
+    border-bottom: 1px solid #EEEEEE;
 }
