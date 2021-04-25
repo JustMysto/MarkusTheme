@@ -35,7 +35,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    transform: translate3d(0px, 20px, 0px) !important;
+    transform: translate3d(0px, 30px, 0px) !important;
 }
 
 .emz_simple_dropdown {
@@ -62,6 +62,7 @@
     color: black;
     font-weight: 600;
     text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
     padding: 5px 0;
 }
 
@@ -88,4 +89,17 @@
         color: #4a4a4a;
         font-weight: 600;
     }
+}
+
+.emz_menu_item {
+    margin-right: 4px;
+    color: #111;
+    font-size: 13px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    line-height: 46px;
+}
+
+.emz_menu_item:last-child {
+    margin-right: 0;
 }

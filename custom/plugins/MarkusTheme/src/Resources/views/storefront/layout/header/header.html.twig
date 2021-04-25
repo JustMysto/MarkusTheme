@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block header_mid_nav %}
-    <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex justify-content-between align-items-center my-5">
         <div class="col-md-4 p-0 d-none d-md-block">
             {% sw_include '@MarkusTheme/storefront/layout/header/emz_curr_lang_switch.html.twig' %}
         </div>
@@ -35,8 +35,8 @@
 {% block header_bot_nav %}
     <div class="d-none d-md-flex justify-content-between align-items-center position-relative">
         <ul class="d-flex m-0 p-0">
-            <li><a href="#" class="text-uppercase pl-1 pr-2">home</a></li>
-            <li class="dropdown">
+            <li class="emz_menu_item"><a href="#" class="text-uppercase pl-1 pr-2">home</a></li>
+            <li class="dropdown emz_menu_item">
                 <a href="#" id="categories" class="dropdown-toggle text-uppercase pl-1 pr-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">categories</a>
                 <div class="dropdown-menu emz_dropdown emz_small_dropdown" aria-labelledby="categories">
                     <div class="row">
@@ -75,7 +75,7 @@
                     </div>
                 </div>
             </li>
-            <li class="dropdown position-static">
+            <li class="dropdown position-static emz_menu_item">
                 <a href="#" id="products" class="dropdown-toggle text-uppercase pl-1 pr-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">products</a>
                 <div class="dropdown-menu emz_dropdown emz_fullwidth_dropdown" aria-labelledby="products">
                     <div class="row">
@@ -124,7 +124,7 @@
                     </div>
                 </div>
             </li>
-            <li class="dropdown">
+            <li class="dropdown emz_menu_item">
                 <a href="#" id="pages" class="dropdown-toggle text-uppercase pl-1 pr-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">pages</a>
                 <div class="dropdown-menu emz_dropdown emz_simple_dropdown" aria-labelledby="pages">
                     <h2 class="emz_dropdown_heading pl-3 pt-4">variations</h2>
@@ -139,7 +139,7 @@
                     </ul>
                 </div>
             </li>
-            <li class="dropdown">
+            <li class="dropdown emz_menu_item">
                 <a href="#" id="features" class="dropdown-toggle text-uppercase pl-1 pr-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">features</a>
                 <div class="dropdown-menu emz_dropdown emz_simple_dropdown" aria-labelledby="features">
                     <h2 class="emz_dropdown_heading pl-3 pt-4">variations</h2>
@@ -149,8 +149,8 @@
                     </ul>
                 </div>
             </li>
-            <li><a href="#" class="text-uppercase pl-1 pr-2">special offer!</a></li>
-            <li><a href="#" class="text-uppercase pl-1 pr-2">buy porto!</a></li>
+            <li class="emz_menu_item"><a href="#" class="text-uppercase pl-1 pr-2">special offer!</a></li>
+            <li class="emz_menu_item"><a href="#" class="text-uppercase pl-1 pr-2">buy porto!</a></li>
         </ul>
         <span>{% sw_include '@MarkusTheme/storefront/layout/header/emz_shopping_cart.html.twig' %}</span>
     </div>
