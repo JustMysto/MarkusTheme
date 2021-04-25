@@ -17,6 +17,15 @@
 
 .select-wrapper {
     display: inline-flex;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.33px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+
+    .dropdown {
+        margin-right: 8px;
+    }
 }
 
 .emz_dropdown {
