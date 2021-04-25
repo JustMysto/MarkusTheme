@@ -64,3 +64,28 @@
     text-transform: uppercase;
     padding: 5px 0;
 }
+
+.emz_parent_menu {
+    margin-right: 10px;
+}
+
+.emz_parent_menu:last-child {
+    margin-right: 0;
+}
+
+.emz_search_wrapper {
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E6E3DF;
+    padding: 6px 20px;
+    font-size: 11px;
+
+    input {
+        border: 0;
+        background-color: inherit;
+        color: #4a4a4a;
+        font-weight: 600;
+    }
+}
