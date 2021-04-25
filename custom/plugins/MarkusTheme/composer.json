@@ -1,0 +1,18 @@
+{
+  "name": "swag/theme-skeleton",
+  "description": "Theme skeleton plugin",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "MarkusTheme\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "MarkusTheme\\MarkusTheme",
+    "label": {
+      "de-DE": "Theme MarkusTheme plugin",
+      "en-GB": "Theme MarkusTheme plugin"
+    }
+  }
+}

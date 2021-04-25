@@ -1,0 +1,18 @@
+.mid-nav {
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+        display: flex;
+
+        a {
+            padding: 0 15px;
+        }
+    }
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

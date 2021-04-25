@@ -1,0 +1,26 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% block base_header %}
+    <header class="header-main">
+        {% block base_header_inner %}
+            <div class="top-nav-bg">
+                <div class="container">
+                    {% sw_include '@Storefront/storefront/layout/header/top-bar.html.twig' %}
+                </div>
+            </div>
+            <div class="container">
+                {% sw_include '@Storefront/storefront/layout/header/header.html.twig' %}
+            </div>
+        {% endblock %}
+    </header>
+{% endblock %}
+
+{% block base_footer %}
+    <footer>
+        {% block base_footer_inner %}
+            <div class="container">
+                {% sw_include '@Storefront/storefront/layout/footer/footer.html.twig' %}
+            </div>
+        {% endblock %}
+    </footer>
+{% endblock %}
