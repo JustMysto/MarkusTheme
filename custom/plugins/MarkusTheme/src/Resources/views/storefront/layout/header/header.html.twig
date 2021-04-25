@@ -1,16 +1,48 @@
-<div class="mid-nav">
-    <div>Compare</div>
-    <ul>
-        <li>DEFAULT WELCOME MSG!</li>
-        <li><a href="">CONTACT US</a></li>
-        <li><a href="">BLOG</a></li>
-        <li><a href="">SIGN IN</a></li>
-        <li><a href="">CREATE AN ACCOUNT</a></li>
-    </ul>
-</div>
+{% block header_head_nav %}
+    <div class="d-none d-md-flex justify-content-between">
+        <div>Compare</div>
+        <ul class="d-flex">
+            <li class="mr-1">DEFAULT WELCOME MSG!</li>
+            <li class="mr-1"><a href="">CONTACT US</a></li>
+            <li class="mr-1"><a href="">BLOG</a></li>
+            <li class="mr-1"><a href="">SIGN IN</a></li>
+            <li><a href="">CREATE AN ACCOUNT</a></li>
+        </ul>
+    </div>
+{% endblock %}
 
-<div class="main-nav">
-    <div>USD ENGLISH</div>
-    <img src="{{ asset('logo_black_new.png', '@MarkusTheme') }}"/>
-    <input/>
-</div>
+{% block header_mid_nav %}
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="col-md-4 p-0 d-none d-md-block">
+            USD ENGLISH
+        </div>
+        <div class="col-4 p-0 text-center">
+            <img alt="logo" src="{{ asset('logo_black_new.png', '@MarkusTheme') }}"/>
+        </div>
+
+        <div class="col-md-4 p-0 d-none d-md-block">
+            <input class="float-right"/>
+        </div>
+
+        <div class="col-8 p-0 d-sm-block d-md-none text-right">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-bars"></i>
+            {% sw_include '@MarkusTheme/storefront/layout/header/emz_shopping_cart.html.twig' %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block header_bot_nav %}
+    <div class="d-none d-md-flex justify-content-between align-items-center">
+        <ul class="d-flex m-0 p-0">
+            <li><a href="#" class="text-uppercase pl-1 pr-2">home</a></li>
+            <li><a href="#" class="text-uppercase pl-1 pr-2">categories</a></li>
+            <li><a href="#" class="text-uppercase pl-1 pr-2">products</a></li>
+            <li><a href="#" class="text-uppercase pl-1 pr-2">pages</a></li>
+            <li><a href="#" class="text-uppercase pl-1 pr-2">features</a></li>
+            <li><a href="#" class="text-uppercase pl-1 pr-2">special offer!</a></li>
+            <li><a href="#" class="text-uppercase pl-1 pr-2">buy porto!</a></li>
+        </ul>
+        <span>{% sw_include '@MarkusTheme/storefront/layout/header/emz_shopping_cart.html.twig' %}</span>
+    </div>
+{% endblock %}
