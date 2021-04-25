@@ -18,3 +18,49 @@
 .select-wrapper {
     display: inline-flex;
 }
+
+.emz_dropdown {
+    box-shadow: 0 7px 10px -2px rgba(0,0,0,0.25);
+    border: 0;
+}
+
+.emz_small_dropdown {
+    width: 580px;
+}
+
+.emz_fullwidth_dropdown {
+    position: absolute;
+    will-change: transform;
+    right: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translate3d(0px, 20px, 0px) !important;
+}
+
+.emz_simple_dropdown {
+
+}
+
+.emz_dropdown_heading {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 24px;
+    cursor: pointer;
+    color: #111;
+    text-transform: uppercase;
+}
+
+.emz_small_dropdown_image {
+    max-width: 100%;
+    padding: 5px 5px 0 0;
+}
+
+.emz_small_dropdown_item {
+    font-size: 12px;
+    line-height: 24px;
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 5px 0;
+}

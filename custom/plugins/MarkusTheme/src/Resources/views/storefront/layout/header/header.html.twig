@@ -33,13 +33,120 @@
 {% endblock %}
 
 {% block header_bot_nav %}
-    <div class="d-none d-md-flex justify-content-between align-items-center">
+    <div class="d-none d-md-flex justify-content-between align-items-center position-relative">
         <ul class="d-flex m-0 p-0">
             <li><a href="#" class="text-uppercase pl-1 pr-2">home</a></li>
-            <li><a href="#" class="text-uppercase pl-1 pr-2">categories</a></li>
-            <li><a href="#" class="text-uppercase pl-1 pr-2">products</a></li>
-            <li><a href="#" class="text-uppercase pl-1 pr-2">pages</a></li>
-            <li><a href="#" class="text-uppercase pl-1 pr-2">features</a></li>
+            <li class="dropdown">
+                <a href="#" id="categories" class="dropdown-toggle text-uppercase pl-1 pr-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">categories</a>
+                <div class="dropdown-menu emz_dropdown emz_small_dropdown" aria-labelledby="categories">
+                    <div class="row">
+                        <div class="col-4">
+                            <h2 class="emz_dropdown_heading pl-3 pt-4">variations 1</h2>
+                            <ul class="pl-3">
+                                <li class="emz_small_dropdown_item"><a href="#">FULLWIDTH BANNER</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">BOXED IMAGE BANNER</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">BOXED SLIDER BANNER</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">LEFT SIDEBAR</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">RIGHT SIDEBAR</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">PRODUCT FLEX GRID</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">PRODUCT LIST ITEM TYPES</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-4">
+                            <h2 class="emz_dropdown_heading pl-3 pt-4">variations 2</h2>
+                            <ul class="pl-3">
+                                <li class="emz_small_dropdown_item"><a href="#">AJAX INFINITE SCROLL</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">3 COLUMNS PRODUCTS</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">4 COLUMNS PRODUCTS</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">5 COLUMNS PRODUCTS</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">6 COLUMNS PRODUCTS</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">7 COLUMNS PRODUCTS</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">8 COLUMNS PRODUCTS</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-4">
+                            <a href="#">
+                                <img class="emz_small_dropdown_image" alt="sale" src="{{ asset('menu-banner-static-width2.jpg', '@MarkusTheme') }}"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown position-static">
+                <a href="#" id="products" class="dropdown-toggle text-uppercase pl-1 pr-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">products</a>
+                <div class="dropdown-menu emz_dropdown emz_fullwidth_dropdown" aria-labelledby="products">
+                    <div class="row">
+                        <div class="col-3">
+                            <h2 class="emz_dropdown_heading pl-3 pt-4">variations</h2>
+                            <ul class="pl-3">
+                                <li class="emz_small_dropdown_item"><a href="#">PRODUCT PAGE WITH SIDEBAR</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">PRODUCT PAGE WITHOUT SIDEBAR</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">HORIZONTAL THUMBNAILS</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">VERTICAL THUMBNAILS</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">ADDTOCART STICKY</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">VERTICAL TABS</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-3">
+                            <h2 class="emz_dropdown_heading pl-3 pt-4">variations</h2>
+                            <ul class="pl-3">
+                                <li class="emz_small_dropdown_item"><a href="#">ACCORDION TABS</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">STICKY TABS</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">CONFIGURABLE PRODUCT</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">BUNDLE PRODUCT</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">GROUPED PRODUCT</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">DOWNLOADABLE PRODUCT</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-3">
+                            <h2 class="emz_dropdown_heading pl-3 pt-4">PRODUCT LAYOUT TYPES</h2>
+                            <ul class="pl-3">
+                                <li class="emz_small_dropdown_item"><a href="#">DEFAULT LAYOUT</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">EXTENDED LAYOUT</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">FULL WIDTH LAYOUT</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">GRID IMAGES LAYOUT</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">STICKY RIGHT SIDE INFO</a></li>
+                                <li class="emz_small_dropdown_item"><a href="#">VERTICAL LAYOUT</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-3">
+                            <a href="#">
+                                <img class="emz_small_dropdown_image" alt="sale" src="{{ asset('menu-banner15.jpg', '@MarkusTheme') }}"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" id="pages" class="dropdown-toggle text-uppercase pl-1 pr-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">pages</a>
+                <div class="dropdown-menu emz_dropdown emz_simple_dropdown" aria-labelledby="pages">
+                    <h2 class="emz_dropdown_heading pl-3 pt-4">variations</h2>
+                    <ul class="pl-3">
+                        <li class="emz_small_dropdown_item"><a href="#">ABOUT US</a></li>
+                        <li class="emz_small_dropdown_item"><a href="#">CONTACT US</a></li>
+                        <li class="emz_small_dropdown_item"><a href="#">BLOG</a></li>
+                        <li class="emz_small_dropdown_item"><a href="#">POST</a></li>
+                        <li class="emz_small_dropdown_item"><a href="#">SHOPPING CART</a></li>
+                        <li class="emz_small_dropdown_item"><a href="#">CHECKOUT</a></li>
+                        <li class="emz_small_dropdown_item"><a href="#">MY ACCOUNT</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" id="features" class="dropdown-toggle text-uppercase pl-1 pr-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">features</a>
+                <div class="dropdown-menu emz_dropdown emz_simple_dropdown" aria-labelledby="features">
+                    <h2 class="emz_dropdown_heading pl-3 pt-4">variations</h2>
+                    <ul class="pl-3">
+                        <li class="emz_small_dropdown_item"><a href="#">HEADER TYPES</a></li>
+                        <li class="emz_small_dropdown_item"><a href="#">FOOTER TYPES</a></li>
+                    </ul>
+                </div>
+            </li>
             <li><a href="#" class="text-uppercase pl-1 pr-2">special offer!</a></li>
             <li><a href="#" class="text-uppercase pl-1 pr-2">buy porto!</a></li>
         </ul>
