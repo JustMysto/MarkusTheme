@@ -14,7 +14,7 @@
 {% block header_mid_nav %}
     <div class="d-flex justify-content-between align-items-center">
         <div class="col-md-4 p-0 d-none d-md-block">
-            USD ENGLISH
+            {% sw_include '@MarkusTheme/storefront/layout/header/emz_curr_lang_switch.html.twig' %}
         </div>
         <div class="col-4 p-0 text-center">
             <img alt="logo" src="{{ asset('logo_black_new.png', '@MarkusTheme') }}"/>

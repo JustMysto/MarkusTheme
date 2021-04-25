@@ -1,1 +1,20 @@
+.switch-box {
+    justify-content: center;
+    align-items: center;
+    padding: 6px 10px;
+    background-color: #e6e3df;
+    color: #4a4a4a;
+    cursor: pointer;
+}
 
+.dropdown {
+    margin-right: 1rem;
+}
+
+.dropdown:last-child {
+    margin-right: 0;
+}
+
+.select-wrapper {
+    display: inline-flex;
+}
