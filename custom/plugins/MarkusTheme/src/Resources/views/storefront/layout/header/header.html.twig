@@ -18,7 +18,7 @@
             {% sw_include '@MarkusTheme/storefront/layout/header/emz_curr_lang_switch.html.twig' %}
         </div>
         <div class="col-4 p-0 text-center">
-            <img alt="logo" src="{{ asset('logo_black_new.png', '@MarkusTheme') }}"/>
+            <img alt="logo" class="logo" src="{{ asset('logo_black_new.png', '@MarkusTheme') }}"/>
         </div>
 
         <div class="col-md-4 p-0 d-none d-md-block">
@@ -26,9 +26,11 @@
         </div>
 
         <div class="col-8 p-0 d-sm-block d-md-none text-right">
-            <i class="fas fa-search"></i>
-            <i id="toggleSideBar" class="fas fa-bars"></i>
-            {% sw_include '@MarkusTheme/storefront/layout/header/emz_shopping_cart.html.twig' %}
+            <span class="emz_icon_wrapper">
+                <i id="searchIcon" class="fas fa-search"></i>
+                <i id="toggleSideBar" class="fas fa-bars"></i>
+                {% sw_include '@MarkusTheme/storefront/layout/header/emz_shopping_cart.html.twig' %}
+            </span>
         </div>
     </div>
     <div class="emz_sepline"></div>
