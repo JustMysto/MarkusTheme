@@ -9,9 +9,19 @@
             {% sw_include '@Storefront/storefront/layout/header/header.html.twig' %}
         {% endblock %}
     </header>
-    <div style="min-height: 100vh">
+{% endblock %}
+
+{% block base_navigation %}
+
+{% endblock %}
+
+{% block base_main %}
+    <main class="content-main">
         {% sw_include '@MarkusTheme/storefront/layout/header/emz_main_nav.html.twig' %}
-    </div>
+        <div class="container">
+            <img style="display: block; max-width: 100%" alt="hero" src="{{ asset('bg-hero.jpg', '@MarkusTheme') }}"/>
+        </div>
+    </main>
 {% endblock %}
 
 {% block base_footer %}
