@@ -1,5 +1,5 @@
 {% block header_head_nav %}
-    <div class="container d-none d-md-flex justify-content-between emz_head_nav_wrapper">
+    <div class="container d-none d-md-flex justify-content-md-end justify-content-lg-between emz_head_nav_wrapper">
         {% sw_include '@MarkusTheme/storefront/layout/header/emz_compare.html.twig' %}
         <ul class="d-flex m-0">
             <li class="emz_head_nav_items">DEFAULT WELCOME MSG!</li>
@@ -32,6 +32,9 @@
                 {% sw_include '@MarkusTheme/storefront/layout/header/emz_shopping_cart.html.twig' %}
             </span>
         </div>
+    </div>
+    <div class="container">
+        <input class="emz_mobile_search_box" type="text" placeholder="Search...">
     </div>
     <div class="emz_sepline"></div>
 {% endblock %}

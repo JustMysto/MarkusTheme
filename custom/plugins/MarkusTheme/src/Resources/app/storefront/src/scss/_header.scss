@@ -192,11 +192,25 @@
     font-size: 18px;
     font-family: 'Oswald', sans-serif;
     color: #050203;
+    cursor: pointer;
 
     i {
         padding: 0 5px;
     }
 }
+
+.emz_mobile_search_box {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+}
+
+.displayTrue {
+    display: block;
+}
+
 
 @media screen and (max-width: 576px) {
     .logo {
@@ -252,6 +266,14 @@
     #searchIcon, #toggleSideBar {
         display: none;
     }
+
+    .emz_icon_wrapper {
+        font-size: 14px;
+    }
+
+    .emz_mobile_search_box {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -259,6 +281,10 @@
     .showSidebar {
         transform: translateX(371px) !important;
         overflow-y: hidden;
+    }
+
+    .emz_sepline {
+        display: none;
     }
 
     .emz_main_nav {
@@ -286,7 +312,6 @@
             font-family: "Open Sans", sans-serif;
             margin: 0;
             color: #777;
-            border-bottom: 1px solid #d4d4d4;
 
             a {
                 display: flex;
@@ -319,6 +344,14 @@
 
             .second_level > a {
                 color: #777;
+            }
+
+            .first_level {
+                border-bottom: 1px solid #d4d4d4;
+            }
+
+            .first_level_list {
+                border-bottom: 1px solid #d4d4d4;
             }
         }
 

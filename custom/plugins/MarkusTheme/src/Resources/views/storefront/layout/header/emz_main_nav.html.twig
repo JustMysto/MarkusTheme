@@ -1,9 +1,9 @@
 {% block emz_main_nav %}
     <nav class="emz_main_nav container d-none d-md-flex justify-content-between align-items-center sticky-top">
         <ul class="d-flex m-0 p-0">
-            <li class="emz_menu_item"><a href="#" class="text-uppercase pl-1 pr-2"><span>home</span></a></li>
+            <li class="emz_menu_item"><a href="#" class="first_level text-uppercase pl-1 pr-2"><span>home</span></a></li>
             <li class="emz_menu_item">
-                <a href="#" id="categories" class="first_level text-uppercase pl-1 pr-2"><span>categories</span></a>
+                <a href="#" id="categories" class="first_level_list text-uppercase pl-1 pr-2"><span>categories</span></a>
                 <i class="menu_toggle fas fa-chevron-down"></i>
                 <div class="emz_sub_menu emz_sub_menu_small">
                     <div class="row">
@@ -47,7 +47,7 @@
                 </div>
             </li>
             <li class="emz_menu_item position-static">
-                <a href="#" id="products" class="first_level text-uppercase pl-1 pr-2"><span>products</span></a>
+                <a href="#" id="products" class="first_level_list text-uppercase pl-1 pr-2"><span>products</span></a>
                 <i class="menu_toggle fas fa-chevron-down"></i>
                 <div class="emz_sub_menu emz_fullwidth_dropdown">
                     <div class="row">
@@ -121,7 +121,7 @@
                 </div>
             </li>
             <li class="emz_menu_item">
-                <a href="#" id="pages" class="first_level text-uppercase pl-1 pr-2"><span>pages</span></a>
+                <a href="#" id="pages" class="first_level_list text-uppercase pl-1 pr-2"><span>pages</span></a>
                 <i class="menu_toggle fas fa-chevron-down"></i>
                 <div class="emz_sub_menu">
                     <ul class="emz_sub_child_menu pl-3">
@@ -136,7 +136,7 @@
                 </div>
             </li>
             <li class="emz_menu_item">
-                <a href="#" id="features" class="first_level text-uppercase pl-1 pr-2"><span>features</span></a>
+                <a href="#" id="features" class="first_level_list text-uppercase pl-1 pr-2"><span>features</span></a>
                 <i class="menu_toggle fas fa-chevron-down"></i>
                 <div class="emz_sub_menu">
                     <ul class="emz_sub_child_menu pl-3">
@@ -145,17 +145,17 @@
                     </ul>
                 </div>
             </li>
-            <li class="emz_menu_item"><a href="#" class="text-uppercase pl-1 pr-2"><span>special offer!</span></a></li>
-            <li class="emz_menu_item"><a href="#" class="text-uppercase pl-1 pr-2"><span>buy porto!</span></a></li>
+            <li class="emz_menu_item"><a href="#" class="first_level text-uppercase pl-1 pr-2"><span>special offer!</span></a></li>
+            <li class="emz_menu_item"><a href="#" class="first_level text-uppercase pl-1 pr-2"><span>buy porto!</span></a></li>
         </ul>
-        <span>{% sw_include '@MarkusTheme/storefront/layout/header/emz_shopping_cart.html.twig' %}</span>
+        <span class="emz_icon_wrapper">{% sw_include '@MarkusTheme/storefront/layout/header/emz_shopping_cart.html.twig' %}</span>
     </nav>
 {% endblock %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(".emz_menu_item").click(function() {
-        $(this).find(".first_level").toggleClass("active_list");
+        $(this).find(".first_level_list").toggleClass("active_list");
         $(this).find(".fas").toggleClass("fa-chevron-down");
         $(this).find(".fas").toggleClass("fa-chevron-up");
         $(this).find(".emz_sub_menu").toggleClass("show");
@@ -169,5 +169,9 @@
 
     $("#toggleSideBar").click(function () {
         $("body").toggleClass("showSidebar");
+    })
+
+    $("#searchIcon").click(function() {
+        $(".emz_mobile_search_box").toggleClass("displayTrue");
     })
 </script>
