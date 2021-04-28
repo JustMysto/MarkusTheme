@@ -165,6 +165,10 @@
         if (!$(".emz_menu_item").is(e.target) && $(".emz_menu_item").has(e.target).length === 0) {
             $("body").removeClass('showSidebar');
         }
+
+        if (!$(".emz_shopping_cart_details").is(e.target) && $(".emz_shopping_cart_details").has(e.target).length === 0) {
+            $(".emz_shopping_cart_details").removeClass('displayTrue');
+        }
     });
 
     $("#toggleSideBar").click(function () {
@@ -173,5 +177,35 @@
 
     $("#searchIcon").click(function() {
         $(".emz_mobile_search_box").toggleClass("displayTrue");
+    })
+
+    $(".emz_shopping_cart_wrapper").click(function() {
+        $(".emz_shopping_cart_details").toggleClass("displayTrue");
+    })
+
+    $(".emz_shopping_cart_details > i").click(function() {
+        $(".emz_shopping_cart_details").toggleClass("displayTrue");
+    })
+
+    $("#currency").click(function() {
+        $("#currency .emz_switch_box_menu").toggleClass("displayTrue");
+        $("#currency > i").toggleClass("fa-chevron-down");
+        $("#currency > i").toggleClass("fa-chevron-up");
+        if ($("#lang .emz_switch_box_menu").hasClass("displayTrue")) {
+            $("#lang .emz_switch_box_menu").toggleClass("displayTrue")
+            $("#lang > i").toggleClass("fa-chevron-down");
+            $("#lang > i").toggleClass("fa-chevron-up");
+        }
+    })
+
+    $("#lang").click(function() {
+        $("#lang .emz_switch_box_menu").toggleClass("displayTrue");
+        $("#lang > i").toggleClass("fa-chevron-down");
+        $("#lang > i").toggleClass("fa-chevron-up");
+        if ($("#currency .emz_switch_box_menu").hasClass("displayTrue")) {
+            $("#currency .emz_switch_box_menu").toggleClass("displayTrue")
+            $("#currency > i").toggleClass("fa-chevron-down");
+            $("#currency > i").toggleClass("fa-chevron-up");
+        }
     })
 </script>

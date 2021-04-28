@@ -1,4 +1,13 @@
 {% block emz_shopping_cart %}
-    <i class="fas fa-shopping-basket"></i>
-    <span class="text-uppercase">0 items</span>
+    <span class="emz_shopping_cart_wrapper">
+        <i class="fas fa-shopping-basket"></i>
+        <span class="text-uppercase">0 items</span>
+    </span>
+
+    {% block emz_shopping_cart_details %}
+        <div class="emz_shopping_cart_details">
+            <i class="fas fa-times"></i>
+            You have no items in your shopping cart.
+        </div>
+    {% endblock %}
 {% endblock %}
