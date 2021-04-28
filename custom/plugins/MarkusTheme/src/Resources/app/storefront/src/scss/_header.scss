@@ -42,25 +42,13 @@
     display: none;
 }
 
-.emz_menu_right {
-
-}
-
 .emz_sub_menu_small {
     width: 580px;
 }
 
-.emz_sub_child_menu {
-
-}
-
-.emz_simple_dropdown {
-
-}
-
 .emz_small_dropdown_image {
     max-width: 100%;
-    padding: 5px 5px 0 0;
+    padding: 35px 5px 0 0px;
 }
 
 .emz_small_dropdown_item {
@@ -97,6 +85,10 @@
         font-weight: 600;
         padding: 1px 35px 1px 2px;
     }
+
+    i {
+        cursor: pointer;
+    }
 }
 
 .emz_menu_item {
@@ -105,10 +97,6 @@
     font-size: 13px;
     font-family: "Oswald", sans-serif;
     font-weight: 400;
-}
-
-.emz_menu_item a:first-child {
-    padding-left: 0 !important;
 }
 
 .emz_menu_item:last-child {
@@ -236,9 +224,11 @@
     .emz_dropdown_heading {
         font-weight: 700;
         line-height: 24px;
+        font-family: "Open Sans", sans-serif;
         cursor: pointer;
         color: #111;
         text-transform: uppercase;
+        padding-left: 20px;
     }
 
     .emz_sub_menu {
@@ -249,6 +239,15 @@
         line-height: 46px;
     }
 
+    .emz_sub_child_menu {
+        padding-left: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        font-family: Open Sans, sans-serif;
+        color: black;
+        text-transform: uppercase;
+    }
+
     .emz_fullwidth_dropdown {
         position: absolute;
         will-change: transform;
@@ -256,7 +255,14 @@
         width: 100%;
         top: 0;
         left: 0;
-        transform: translate3d(0px, 30px, 0px) !important;
+        transform: translate3d(0px, 48px, 0px) !important;
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            padding: 5px 5px 5px 0;
+            margin-top: 28px;
+        }
     }
 
     .logo {
@@ -273,6 +279,54 @@
 
     .emz_mobile_search_box {
         display: none;
+    }
+
+    .emz_main_nav {
+        background-color: white;
+    }
+
+    .first_level:hover, .first_level_list:hover {
+        text-decoration: none;
+    }
+
+    .first_level_list:after {
+        content: "";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        margin-left: 5px;
+    }
+
+    .second_level {
+        font-family: Open Sans, sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 40px;
+    }
+
+    .simple_menu {
+        width: 200px;
+    }
+
+    .simple_menu > .emz_sub_child_menu > .emz_menu_item {
+        color: #777;
+    }
+
+    .simple_menu > .emz_sub_child_menu > .second_level.emz_menu_item:hover {
+        background-color: #f4f4f4;
+    }
+
+    .simple_menu > .emz_sub_child_menu > .second_level.emz_menu_item a {
+        text-decoration: none;
+    }
+
+    .simple_menu ul {
+        padding: 5px;
+
+        li {
+            margin: 0;
+            padding-left: 10px;
+            cursor: pointer;
+        }
     }
 }
 
@@ -335,7 +389,7 @@
                 content: "";
                 font-family: "Font Awesome 5 Free";
                 margin-right: 10px;
-                font-size: 16px;
+                font-size: 11px;
                 vertical-align: top;
                 color: #aaa;
                 display: inline;
@@ -373,7 +427,7 @@
         position: relative !important;
         height: 0;
         visibility: hidden;
-        padding-left: 20px;
+        padding-left: 40px;
         line-height: 16.9px;
         font-size: 13px;
         font-weight: 400;
@@ -381,6 +435,10 @@
         .emz_dropdown_heading {
             font-weight: 400;
         }
+    }
+
+    .emz_sub_child_menu {
+        padding-left: 16px;
     }
 
     .show {
@@ -398,5 +456,13 @@
 
     .logo {
         float: left;
+    }
+
+    .emz_menu_item a:first-child {
+        padding-left: 0 !important;
+    }
+
+    .simple_menu ul {
+        margin-left: -40px;
     }
 }
