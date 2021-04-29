@@ -1,181 +1,185 @@
 {% block emz_main_nav %}
     <div class="emz_mega_menu sticky-top">
-        <div class="emz_tab_wrapper">
-            <div id="menu" class="emz_tab_switch active_tab"><span><i class="fas fa-bars"></i><a href="#">Menu</a></span></div>
-            <div id="account" class="emz_tab_switch"><a href="#">Account</a></div>
-            <div id="settings" class="emz_tab_switch"><a href="#">Settings</a></div>
-        </div>
-        <nav class="emz_main_nav container d-md-flex justify-content-between align-items-center">
-            <ul class="m-0 p-0" id="nav_menu">
-                <li class="emz_menu_item"><a href="#" class="first_level text-uppercase pl-1 pr-2"><span>home</span></a></li>
-                <li class="emz_menu_item">
-                    <a href="#" id="categories" class="first_level_list text-uppercase pl-1 pr-2"><span>categories</span></a>
-                    <i class="menu_toggle fas fa-chevron-down"></i>
-                    <div class="emz_sub_menu emz_sub_menu_small">
-                        <div class="row">
-                            <ul class="emz_sub_child_menu col-md-8 d-flex">
-                                <li class="second_level emz_menu_item">
-                                    <a href="#" class=" emz_dropdown_heading">Variations 1</a>
-                                    <ul class="emz_sub_child_menu">
-                                        <li class="second_level emz_menu_item"><a href="#">Fullwidth Banner</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">Boxed Image Banner</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">Boxed Slider Banner</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">Left Sidebar</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">Right Sidebar</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">Product Flex Grid</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">Product List Item Types</a></li>
-                                    </ul>
-                                </li>
+        {% block emz_main_nav_switch_menu %}
+            <div class="emz_tab_wrapper">
+                <div id="menu" class="emz_tab_switch active_tab"><span><i class="fas fa-bars"></i><a href="#">Menu</a></span></div>
+                <div id="account" class="emz_tab_switch"><a href="#">Account</a></div>
+                <div id="settings" class="emz_tab_switch"><a href="#">Settings</a></div>
+            </div>
+        {% endblock %}
+        {% block emz_main_nav_content %}
+            <nav class="emz_main_nav container d-md-flex justify-content-between align-items-center">
+                <ul class="m-0 p-0" id="nav_menu">
+                    <li class="emz_menu_item"><a href="#" class="first_level text-uppercase pl-1 pr-2"><span>home</span></a></li>
+                    <li class="emz_menu_item">
+                        <a href="#" id="categories" class="first_level_list text-uppercase pl-1 pr-2"><span>categories</span></a>
+                        <i class="menu_toggle fas fa-chevron-down"></i>
+                        <div class="emz_sub_menu emz_sub_menu_small">
+                            <div class="row">
+                                <ul class="emz_sub_child_menu col-md-8 d-flex">
+                                    <li class="second_level emz_menu_item">
+                                        <a href="#" class=" emz_dropdown_heading">Variations 1</a>
+                                        <ul class="emz_sub_child_menu">
+                                            <li class="second_level emz_menu_item"><a href="#">Fullwidth Banner</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">Boxed Image Banner</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">Boxed Slider Banner</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">Left Sidebar</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">Right Sidebar</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">Product Flex Grid</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">Product List Item Types</a></li>
+                                        </ul>
+                                    </li>
 
-                                <li class="second_level emz_menu_item">
-                                    <a href="#" class="emz_dropdown_heading">Variations 2</a>
-                                    <ul class="emz_sub_child_menu">
-                                        <li class="second_level emz_menu_item"><a href="#">
-                                                Ajax Infinite Scroll
-                                                {% sw_include '@MarkusTheme/storefront/layout/header/emz_new_badge.html.twig' %}
-                                            </a>
-                                        </li>
-                                        <li class="second_level emz_menu_item"><a href="#">3 Columns Products</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">4 Columns Products</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">5 Columns Products</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">6 Columns Products</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">7 Columns Products</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">8 Columns Products</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="emz_menu_right col-4">
-                                <a href="#">
-                                    <img class="emz_small_dropdown_image" alt="sale" src="{{ asset('menu-banner-static-width2.jpg', '@MarkusTheme') }}"/>
-                                </a>
+                                    <li class="second_level emz_menu_item">
+                                        <a href="#" class="emz_dropdown_heading">Variations 2</a>
+                                        <ul class="emz_sub_child_menu">
+                                            <li class="second_level emz_menu_item"><a href="#">
+                                                    Ajax Infinite Scroll
+                                                    {% sw_include '@MarkusTheme/storefront/layout/header/emz_new_badge.html.twig' %}
+                                                </a>
+                                            </li>
+                                            <li class="second_level emz_menu_item"><a href="#">3 Columns Products</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">4 Columns Products</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">5 Columns Products</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">6 Columns Products</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">7 Columns Products</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">8 Columns Products</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="emz_menu_right col-4">
+                                    <a href="#">
+                                        <img class="emz_small_dropdown_image" alt="sale" src="{{ asset('menu-banner-static-width2.jpg', '@MarkusTheme') }}"/>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="emz_menu_item position-static">
-                    <a href="#" id="products" class="first_level_list text-uppercase pl-1 pr-2"><span>products</span></a>
-                    <i class="menu_toggle fas fa-chevron-down"></i>
-                    <div class="emz_sub_menu emz_fullwidth_dropdown">
-                        <div class="row">
-                            <ul class="emz_sub_child_menu col-md-8 d-flex">
-                                <li class="second_level emz_menu_item">
-                                    <a href="#" class="emz_dropdown_heading">Variations</a>
-                                    <ul class="emz_sub_child_menu">
-                                        <li class="second_level emz_menu_item"><a href="#">Product Page With Sidebar</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">Product Page Without Sidebar</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">Horizontal Thumbnails</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">Vertical Thumbnails</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">Addtocart Sticky</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">Vertical Tabs</a></li>
-                                    </ul>
-                                </li>
+                    </li>
+                    <li class="emz_menu_item position-static">
+                        <a href="#" id="products" class="first_level_list text-uppercase pl-1 pr-2"><span>products</span></a>
+                        <i class="menu_toggle fas fa-chevron-down"></i>
+                        <div class="emz_sub_menu emz_fullwidth_dropdown">
+                            <div class="row">
+                                <ul class="emz_sub_child_menu col-md-8 d-flex">
+                                    <li class="second_level emz_menu_item">
+                                        <a href="#" class="emz_dropdown_heading">Variations</a>
+                                        <ul class="emz_sub_child_menu">
+                                            <li class="second_level emz_menu_item"><a href="#">Product Page With Sidebar</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">Product Page Without Sidebar</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">Horizontal Thumbnails</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">Vertical Thumbnails</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">Addtocart Sticky</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">Vertical Tabs</a></li>
+                                        </ul>
+                                    </li>
 
-                                <li class="second_level emz_menu_item">
-                                    <a href="#" class="emz_dropdown_heading">Variations</a>
-                                    <ul class="emz_sub_child_menu">
-                                        <li class="second_level emz_menu_item"><a href="#">Accordion Tabs</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">Sticky Tabs</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">Configurable Product</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">Bundle Product</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">Grouped Product</a></li>
-                                        <li class="second_level emz_menu_item"><a href="#">Downloadable Product</a></li>
-                                    </ul>
-                                </li>
+                                    <li class="second_level emz_menu_item">
+                                        <a href="#" class="emz_dropdown_heading">Variations</a>
+                                        <ul class="emz_sub_child_menu">
+                                            <li class="second_level emz_menu_item"><a href="#">Accordion Tabs</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">Sticky Tabs</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">Configurable Product</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">Bundle Product</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">Grouped Product</a></li>
+                                            <li class="second_level emz_menu_item"><a href="#">Downloadable Product</a></li>
+                                        </ul>
+                                    </li>
 
-                                <li class="second_level emz_menu_item">
-                                    <a href="#" class="emz_dropdown_heading">Product Layout Types</a>
-                                    <ul class="emz_sub_child_menu">
-                                        <li class="second_level emz_menu_item"><a href="#">Default Layout</a></li>
-                                        <li class="second_level emz_menu_item">
-                                            <a href="#">
-                                                Extended Layout
-                                                {% sw_include '@MarkusTheme/storefront/layout/header/emz_new_badge.html.twig' %}
-                                            </a>
-                                        </li>
-                                        <li class="second_level emz_menu_item"><a href="#">
-                                                Full Width Layout
-                                                {% sw_include '@MarkusTheme/storefront/layout/header/emz_new_badge.html.twig' %}
-                                            </a>
-                                        </li>
-                                        <li class="second_level emz_menu_item">
-                                            <a href="#">
-                                                Grid Images Layout
-                                                {% sw_include '@MarkusTheme/storefront/layout/header/emz_new_badge.html.twig' %}
-                                            </a>
-                                        </li>
-                                        <li class="second_level emz_menu_item">
-                                            <a href="#">
-                                                Sticky Right Side Info
-                                                {% sw_include '@MarkusTheme/storefront/layout/header/emz_new_badge.html.twig' %}
-                                            </a>
-                                        </li>
-                                        <li class="second_level emz_menu_item">
-                                            <a href="#">
-                                                Vertical Layout
-                                                {% sw_include '@MarkusTheme/storefront/layout/header/emz_new_badge.html.twig' %}
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div id="emz_lg_img" class="emz_menu_right col-4">
-                                <a href="#">
-                                    <img class="emz_small_dropdown_image" alt="sale" src="{{ asset('menu-banner15.jpg', '@MarkusTheme') }}"/>
-                                </a>
+                                    <li class="second_level emz_menu_item">
+                                        <a href="#" class="emz_dropdown_heading">Product Layout Types</a>
+                                        <ul class="emz_sub_child_menu">
+                                            <li class="second_level emz_menu_item"><a href="#">Default Layout</a></li>
+                                            <li class="second_level emz_menu_item">
+                                                <a href="#">
+                                                    Extended Layout
+                                                    {% sw_include '@MarkusTheme/storefront/layout/header/emz_new_badge.html.twig' %}
+                                                </a>
+                                            </li>
+                                            <li class="second_level emz_menu_item"><a href="#">
+                                                    Full Width Layout
+                                                    {% sw_include '@MarkusTheme/storefront/layout/header/emz_new_badge.html.twig' %}
+                                                </a>
+                                            </li>
+                                            <li class="second_level emz_menu_item">
+                                                <a href="#">
+                                                    Grid Images Layout
+                                                    {% sw_include '@MarkusTheme/storefront/layout/header/emz_new_badge.html.twig' %}
+                                                </a>
+                                            </li>
+                                            <li class="second_level emz_menu_item">
+                                                <a href="#">
+                                                    Sticky Right Side Info
+                                                    {% sw_include '@MarkusTheme/storefront/layout/header/emz_new_badge.html.twig' %}
+                                                </a>
+                                            </li>
+                                            <li class="second_level emz_menu_item">
+                                                <a href="#">
+                                                    Vertical Layout
+                                                    {% sw_include '@MarkusTheme/storefront/layout/header/emz_new_badge.html.twig' %}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div id="emz_lg_img" class="emz_menu_right col-4">
+                                    <a href="#">
+                                        <img class="emz_small_dropdown_image" alt="sale" src="{{ asset('menu-banner15.jpg', '@MarkusTheme') }}"/>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="emz_menu_item">
-                    <a href="#" id="pages" class="first_level_list text-uppercase pl-1 pr-2"><span>pages</span></a>
-                    <i class="menu_toggle fas fa-chevron-down"></i>
-                    <div class="emz_sub_menu simple_menu">
-                        <ul class="emz_sub_child_menu">
-                            <li class="second_level emz_menu_item"><a href="#">About Us</a></li>
-                            <li class="second_level emz_menu_item"><a href="#">Contact Us</a></li>
-                            <li class="second_level emz_menu_item"><a href="#">Blog</a></li>
-                            <li class="second_level emz_menu_item"><a href="#">Post</a></li>
-                            <li class="second_level emz_menu_item"><a href="#">Shopping Cart</a></li>
-                            <li class="second_level emz_menu_item"><a href="#">Checkout</a></li>
-                            <li class="second_level emz_menu_item"><a href="#">My Account</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="emz_menu_item">
-                    <a href="#" id="features" class="first_level_list text-uppercase pl-1 pr-2"><span>features</span></a>
-                    <i class="menu_toggle fas fa-chevron-down"></i>
-                    <div class="emz_sub_menu simple_menu">
-                        <ul class="emz_sub_child_menu">
-                            <li class="second_level emz_menu_item"><a href="#">Header Types</a></li>
-                            <li class="second_level emz_menu_item"><a href="#">Footer Types</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="emz_menu_item"><a href="#" class="first_level text-uppercase pl-1 pr-2"><span>special offer!</span></a></li>
-                <li class="emz_menu_item"><a href="#" class="first_level text-uppercase pl-1 pr-2"><span>buy porto!</span></a></li>
-            </ul>
-            <ul class="m-0 p-0" style="display: none" id="account_menu">
-                {% sw_include '@MarkusTheme/storefront/layout/header/emz_head_nav.html.twig' %}
-            </ul>
-            <ul class="m-0 p-0" style="display: none" id="settings_menu">
-                <li class="currency emz_switch_box">
-                    <span>
-                        USD
-                    </span>
-                    <i class="fas fa-chevron-down"></i>
-                    <span class="emz_switch_box_menu">EUR - Euro</span>
-                </li>
+                    </li>
+                    <li class="emz_menu_item">
+                        <a href="#" id="pages" class="first_level_list text-uppercase pl-1 pr-2"><span>pages</span></a>
+                        <i class="menu_toggle fas fa-chevron-down"></i>
+                        <div class="emz_sub_menu simple_menu">
+                            <ul class="emz_sub_child_menu">
+                                <li class="second_level emz_menu_item"><a href="#">About Us</a></li>
+                                <li class="second_level emz_menu_item"><a href="#">Contact Us</a></li>
+                                <li class="second_level emz_menu_item"><a href="#">Blog</a></li>
+                                <li class="second_level emz_menu_item"><a href="#">Post</a></li>
+                                <li class="second_level emz_menu_item"><a href="#">Shopping Cart</a></li>
+                                <li class="second_level emz_menu_item"><a href="#">Checkout</a></li>
+                                <li class="second_level emz_menu_item"><a href="#">My Account</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="emz_menu_item">
+                        <a href="#" id="features" class="first_level_list text-uppercase pl-1 pr-2"><span>features</span></a>
+                        <i class="menu_toggle fas fa-chevron-down"></i>
+                        <div class="emz_sub_menu simple_menu">
+                            <ul class="emz_sub_child_menu">
+                                <li class="second_level emz_menu_item"><a href="#">Header Types</a></li>
+                                <li class="second_level emz_menu_item"><a href="#">Footer Types</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="emz_menu_item"><a href="#" class="first_level text-uppercase pl-1 pr-2"><span>special offer!</span></a></li>
+                    <li class="emz_menu_item"><a href="#" class="first_level text-uppercase pl-1 pr-2"><span>buy porto!</span></a></li>
+                </ul>
+                <ul class="m-0 p-0" style="display: none" id="account_menu">
+                    {% sw_include '@MarkusTheme/storefront/layout/header/emz_head_nav.html.twig' %}
+                </ul>
+                <ul class="m-0 p-0" style="display: none" id="settings_menu">
+                    <li class="currency emz_switch_box">
+                        <span>
+                            USD
+                        </span>
+                        <i class="fas fa-chevron-down"></i>
+                        <span class="emz_switch_box_menu">EUR - Euro</span>
+                    </li>
 
-                <li class="lang emz_switch_box">
-                    <span>
-                        English
-                    </span>
-                    <i class="fas fa-chevron-down"></i>
-                    <span class="emz_switch_box_menu">Add More</span>
-                </li>
-            </ul>
-            <span id="emz_shopping_cart_big" class="emz_icon_wrapper">{% sw_include '@MarkusTheme/storefront/layout/header/emz_shopping_cart.html.twig' %}</span>
-        </nav>
+                    <li class="lang emz_switch_box">
+                        <span>
+                            English
+                        </span>
+                        <i class="fas fa-chevron-down"></i>
+                        <span class="emz_switch_box_menu">Add More</span>
+                    </li>
+                </ul>
+                <span id="emz_shopping_cart_big" class="emz_icon_wrapper">{% sw_include '@MarkusTheme/storefront/layout/header/emz_shopping_cart.html.twig' %}</span>
+            </nav>
+        {% endblock %}
     </div>
 {% endblock %}
 
