@@ -665,3 +665,9 @@
         float: left;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .payment-info {
+        float: left !important;
+    }
+}
