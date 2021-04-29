@@ -110,6 +110,7 @@
         color: #4a4a4a;
         font-weight: 600;
         padding: 1px 35px 1px 2px;
+        text-transform: uppercase;
     }
 
     i {
@@ -145,7 +146,6 @@
     font-weight: 600;
     letter-spacing: 0.275px;
     line-height: 15.4px;
-    text-transform: uppercase;
 }
 
 .emz_head_nav_items {
@@ -259,21 +259,78 @@
     border-color: transparent transparent black transparent;
 }
 
+.emz_tab_wrapper {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
 
-@media screen and (max-width: 576px) {
-    .logo {
-        width: 120px;
-        float: left;
+.emz_tab_switch {
+    flex: 1;
+    background-color: black;
+    color: white;
+    height: 63px;
+    padding-top: 24px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    a {
+        line-height: 18.2px;
+        font-size: 13px;
     }
+}
+
+.emz_tab_switch i {
+    margin-right: 7px;
+    font-size: 13px;
+}
+
+.emz_tab_switch:last-child {
+    border-right: none;
+}
+
+.active_tab {
+    color: black;
+    background-color: #f6f6f6;
+}
+
+.emz_sub_child_menu a {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#emz_lg_img {
+    display: none;
 }
 
 @media screen and (min-width: 992px) {
     .emz_compare {
         display: block;
     }
+
+    .logo {
+        width: 231px !important;
+    }
+
+    #emz_lg_img {
+        display: block;
+    }
 }
 
 @media screen and (min-width: 768px) {
+
+    #nav_menu {
+        display: flex !important;
+    }
+
+    #account_menu, #settings_menu {
+        display: none !important;
+    }
+
+    .emz_tab_wrapper {
+        display: none;
+    }
 
     li.emz_menu_item:hover > .emz_sub_menu {
         display: block;
@@ -345,6 +402,7 @@
 
     .emz_main_nav {
         background-color: white;
+        position: relative;
     }
 
     .first_level:hover, .first_level_list:hover {
@@ -396,6 +454,10 @@
         margin-top: -8px;
         right: unset;
     }
+
+    .emz_head_nav_wrapper {
+        text-transform: uppercase;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -409,10 +471,11 @@
         display: none;
     }
 
-    .emz_main_nav {
+    .emz_mega_menu {
         display: block !important;
         position: fixed;
         padding: 0;
+        top: 0;
         background-color: #f6f6f6;
         width: 371px;
         height: 100vh;
@@ -420,6 +483,10 @@
         transform: translateX(-371px);
         overflow-x: hidden;
         box-shadow: 0 0 5px 0 rgb(50 50 50 / 75%);
+    }
+
+    .emz_main_nav {
+        padding: 0;
 
         ul {
             flex-direction: column;
@@ -540,6 +607,61 @@
     }
 
     .emz_icon_wrapper {
+        display: block;
+    }
+
+    #account_menu {
+
+        li {
+            padding: 12px 20px;
+            border-bottom: 1px solid #ddd;
+            font-weight: 400;
+            font-size: 13px;
+        }
+
+        .container {
+            padding: 0;
+        }
+
+        ul {
+            padding: 0;
+            width: 100%;
+        }
+
+        div {
+            display: flex !important;
+        }
+    }
+
+    .emz_switch_box {
+        padding: 12px 20px;
+        background-color: #f6f6f6;
+        border-bottom: 1px solid #ddd;
+        font-size: 13px;
+    }
+
+    .emz_switch_box:first-child {
+        margin: 0;
+    }
+
+    #settings_menu {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #emz_shopping_cart_big {
         display: none;
+    }
+
+    .emz_switch_box_menu {
+        top: 36px;
+        left: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .logo {
+        width: 120px;
+        float: left;
     }
 }
