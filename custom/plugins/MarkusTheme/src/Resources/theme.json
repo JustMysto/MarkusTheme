@@ -1,22 +1,162 @@
 {
-  "name": "MarkusTheme",
-  "author": "Shopware AG",
-  "views": [
-     "@Storefront",
-     "@Plugins",
-     "@MarkusTheme"
-  ],
-  "style": [
-    "app/storefront/src/scss/overrides.scss",
-    "@Storefront",
-    "app/storefront/src/scss/base.scss"
-  ],
-  "script": [
-    "@Storefront",
-    "app/storefront/dist/storefront/js/markus-theme.js"
-  ],
-  "asset": [
-    "@Storefront",
-    "app/storefront/src/assets"
-  ]
+    "name": "MarkusTheme",
+    "author": "Shopware AG",
+    "views": [
+        "@Storefront",
+        "@Plugins",
+        "@MarkusTheme"
+    ],
+    "style": [
+        "app/storefront/src/scss/overrides.scss",
+        "@Storefront",
+        "app/storefront/src/scss/base.scss"
+    ],
+    "script": [
+        "@Storefront",
+        "app/storefront/dist/storefront/js/markus-theme.js"
+    ],
+    "asset": [
+        "@Storefront",
+        "app/storefront/src/assets"
+    ],
+    "config": {
+        "blocks": {
+            "General": {
+                "label": {
+                    "en-GB": "General",
+                    "de-DE": "Allgemein"
+                }
+            },
+            "TopBar": {
+                "label": {
+                    "en-GB": "Topbar",
+                    "de-DE": "Kopfzeile"
+                }
+            },
+            "Contact Information": {
+                "label": {
+                    "en-GB": "Contact Information",
+                    "de-DE": "Kontakt Informationen"
+                }
+            },
+            "Social Media": {
+                "label": {
+                    "en-GB": "Social Media",
+                    "de-DE": "Soziale Netzwerke"
+                }
+            }
+        },
+        "fields": {
+            "ShopName": {
+                "label": {
+                    "en-GB": "Shopname",
+                    "de-DE": "Shopname"
+                },
+                "type": "text",
+                "value": "Porto eCommerce",
+                "editable": true,
+                "block": "General"
+            },
+            "Oeffnungszeiten": {
+                "label": {
+                    "en-GB": "Working Hours",
+                    "de-DE": "Öffnungszeiten"
+                },
+                "type": "text",
+                "value": "",
+                "editable": true,
+                "block": "General"
+            },
+            "Kopfzeile1": {
+                "label": {
+                    "en-GB": "TopBar 1",
+                    "de-DE": "Kopfzeile 1"
+                },
+                "type": "text",
+                "value": "FREE SHIPPING & RETURN",
+                "editable": true,
+                "block": "TopBar"
+            },
+            "Kopfzeile2": {
+                "label": {
+                    "en-GB": "TopBar 2",
+                    "de-DE": "Kopfzeile 2"
+                },
+                "type": "text",
+                "value": "MONEY BACK GUARANTEE",
+                "editable": true,
+                "block": "TopBar"
+            },
+            "Kopfzeile3": {
+                "label": {
+                    "en-GB": "TopBar 3",
+                    "de-DE": "Kopfzeile 3"
+                },
+                "type": "text",
+                "value": "ONLINE SUPPORT 24/7",
+                "editable": true,
+                "block": "TopBar"
+            },
+            "Address": {
+                "label": {
+                    "en-GB": "Address",
+                    "de-DE": "Adresse"
+                },
+                "type": "text",
+                "value": "123 Street Name, City, England",
+                "editable": true,
+                "block": "Contact Information"
+            },
+            "Phone": {
+                "label": {
+                    "en-GB": "Phone",
+                    "de-DE": "Telefonnummer"
+                },
+                "type": "text",
+                "value": "(123) 456-7890",
+                "editable": true,
+                "block": "Contact Information"
+            },
+            "Email": {
+                "label": {
+                    "en-GB": "Email",
+                    "de-DE": "Email Adresse"
+                },
+                "type": "fontFamily",
+                "value": "Email",
+                "editable": true,
+                "block": "Contact Information"
+            },
+            "Facebook": {
+                "label": {
+                    "en-GB": "Facebook",
+                    "de-DE": "Facebook"
+                },
+                "type": "text",
+                "value": "Name",
+                "editable": true,
+                "block": "Social Media"
+            },
+            "Twitter": {
+                "label": {
+                    "en-GB": "Twitter",
+                    "de-DE": "Twitter"
+                },
+                "type": "text",
+                "value": "Name",
+                "editable": true,
+                "block": "Social Media"
+            },
+            "LinkedIn": {
+                "label": {
+                    "en-GB": "LinkedIn",
+                    "de-DE": "LinkedIn"
+                },
+                "type": "text",
+                "value": "Name",
+                "editable": true,
+                "block": "Social Media"
+            }
+        }
+    }
 }

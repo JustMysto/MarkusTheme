@@ -3,16 +3,16 @@
   "description": "Theme skeleton plugin",
   "type": "shopware-platform-plugin",
   "license": "MIT",
-  "autoload": {
-    "psr-4": {
-      "MarkusTheme\\": "src/"
-    }
-  },
   "extra": {
     "shopware-plugin-class": "MarkusTheme\\MarkusTheme",
     "label": {
-      "de-DE": "Theme MarkusTheme plugin",
-      "en-GB": "Theme MarkusTheme plugin"
+    "de-DE": "Theme MarkusTheme plugin",
+    "en-GB": "Theme MarkusTheme plugin"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "MarkusTheme\\": "src/"
     }
   }
 }

@@ -2,18 +2,37 @@
     <div class="emz_select_wrapper">
         <div class="currency emz_switch_box">
             <span>
-                USD
+                {{ page.header.activeCurrency.isoCode }}
             </span>
             <i class="fas fa-chevron-down"></i>
-            <span class="emz_switch_box_menu">EUR - Euro</span>
+
+            <span class="emz_switch_box_menu">
+                <ul>
+                    {% for currency in page.header.currencies.elements %}
+                        {% if currency != page.header.activeCurrency %}
+                            <li>{{ currency.isoCode }} - {{ currency.name }}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </span>
         </div>
 
         <div class="lang emz_switch_box">
             <span>
-                English
+                {{ page.header.activeLanguage.name }}
             </span>
-            <i class="fas fa-chevron-down"></i>
-            <span class="emz_switch_box_menu">Add More</span>
+            {% if page.header.languages.elements|length > 1 %}
+                <i class="fas fa-chevron-down"></i>
+                <span class="emz_switch_box_menu">
+                    <ul>
+                        {% for language in page.header.languages.elements %}
+                            {% if language != page.header.activeLanguage %}
+                                <li>{{ language.name }}</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </span>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

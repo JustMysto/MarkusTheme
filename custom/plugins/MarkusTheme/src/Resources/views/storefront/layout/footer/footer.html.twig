@@ -27,9 +27,17 @@
             {% block social_media %}
                 <div class="col-md-12 col-lg-2">
                     <div class="socialmedia-wrapper">
-                        <span><a class="socialmedia-link" href=""><i class="fab fa-facebook-f"></i></a></span>
-                        <span><a class="socialmedia-link" href=""><i class="fab fa-twitter"></i></a></span>
-                        <span><a class="socialmedia-link" href=""><i class="fab fa-linkedin"></i></a></span>
+                        {% if shopware.theme.Facebook %}
+                            <span><a class="socialmedia-link" href="{{ shopware.theme.Facebook }}"><i class="fab fa-facebook-f"></i></a></span>
+                        {% endif %}
+
+                        {% if shopware.theme.Twitter %}
+                            <span><a class="socialmedia-link" href="{{ shopware.theme.Twitter }}"><i class="fab fa-twitter"></i></a></span>
+                        {% endif %}
+
+                        {% if shopware.theme.LinkedIn %}
+                            <span><a class="socialmedia-link" href="{{ shopware.theme.LinkedIn }}"><i class="fab fa-linkedin"></i></a></span>
+                        {% endif %}
                     </div>
                 </div>
             {% endblock %}
@@ -52,21 +60,21 @@
                             <p>
                                 <b>Address</b>
                                 <br>
-                                123 Street Name, City, England
+                                {{ shopware.theme.Address }}
                             </p>
                         </li>
                         <li>
                             <p>
                                 <b>Phone</b>
                                 <br>
-                                (123) 456-7890
+                                {{ shopware.theme.Phone }}
                             </p>
                         </li>
                         <li>
                             <p>
                                 <b>Email</b>
                                 <br>
-                                <a href="mailto:markusbiro@yahoo.de">mail@example.com</a>
+                                <a href="mailto:markusbiro@yahoo.de">{{ shopware.theme.Email }}</a>
                             </p>
                         </li>
                     </ul>
@@ -74,88 +82,45 @@
             </div>
             <div class="col-lg-9">
                 <div class="row">
-                    <div class="col-lg-5">
-                        <div class="info-heading">
-                            <strong>
-                                <span>MY ACCOUNT</span>
-                            </strong>
-                        </div>
-                        <div class="info-text">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <ul class="link-list">
-                                        <li>
-                                            <a href="" title="about us">About us</a>
-                                        </li>
-                                        <li>
-                                            <a href="" title="contact us">Contact us</a>
-                                        </li>
-                                        <li>
-                                            <a href="" title="my account">My Account</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <ul class="link-list">
-                                        <li>
-                                            <a href="" title="order history">Order history</a>
-                                        </li>
-                                        <li>
-                                            <a href="" title="advanced search">Advanced search</a>
-                                        </li>
-                                        <li>
-                                            <a href="" title="login">Login</a>
-                                        </li>
-                                    </ul>
+                    {% for footerNavItem in page.footer.navigation.tree %}
+                        {% set name = footerNavItem.category.translated.name %}
+                        <div class="col-md-12 col-lg-6">
+                            <div class="info-heading"><strong><span>{{ name }}</span></strong></div>
+                            <div class="info-text">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="link-list">
+                                            {% for FooterChildItem in footerNavItem.children[:(footerNavItem.category.childCount+1) / 2] %}
+                                                <li>
+                                                    <a href="{{ seoUrl('frontend.navigation.page', { navigationId: FooterChildItem.category.id }) }}">{{ FooterChildItem.category.translated.name }}</a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="link-list">
+                                            {% for FooterChildItem in footerNavItem.children[(footerNavItem.category.childCount+1) / 2:] %}
+                                                <li>
+                                                    <a href="{{ seoUrl('frontend.navigation.page', { navigationId: FooterChildItem.category.id }) }}">{{ FooterChildItem.category.translated.name }}</a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="info-heading">
-                            <strong>
-                                <span>MAIN FEATURES</span>
-                            </strong>
-                        </div>
-                        <div class="info-text">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <ul class="link-list">
-                                        <li>
-                                            <a href="" title="Super Fast Magento Theme">Super Fast Magento Theme</a>
-                                        </li>
-                                        <li>
-                                            <a href="" title="1st Fully working Ajax Theme">1st Fully working Ajax Theme</a>
-                                        </li>
-                                        <li>
-                                            <a href="" title="20 Unique Homepage Layouts">20 Unique Homepage Layouts</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <ul class="link-list">
-                                        <li>
-                                            <a href="" title="Powerful Admin Panel">Powerful Admin Panel</a>
-                                        </li>
-                                        <li>
-                                            <a href="" title="Mobile & Retina Optimized">Mobile & Retina Optimized</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
                 <div class="row footer-bottom-wrapper">
                     <div class="col-md-5">
-                        <address>Porto eCommerce. © 2020. All Rights Reserved</address>
+                        <address>{{ shopware.theme.ShopName }}. © <script>document.write(new Date().getFullYear())</script>. All Rights Reserved</address>
                     </div>
                     <div class="col-md-7">
                         <div class="uptime">
                             <span>
                                 WORKING DAYS/HOURS
                                 <br>
-                                <b>Mon - Sun / 9:00AM - 8:00PM</b>
+                                <b>{{ shopware.theme.Oeffnungszeiten }}</b>
                             </span>
                         </div>
                         <div class="payment-info">
