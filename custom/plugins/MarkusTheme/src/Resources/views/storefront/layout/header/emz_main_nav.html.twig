@@ -55,39 +55,69 @@
                 </ul>
                 <ul class="m-0 p-0" style="display: none" id="settings_menu">
                     <li class="currency emz_switch_box">
-                        <span>
-                            {{ page.header.activeCurrency.isoCode }}
-                        </span>
-                        {% if page.header.currencies.elements|length > 1 %}
-                            <i class="fas fa-chevron-down"></i>
-                            <span class="emz_switch_box_menu">
-                                <ul>
-                                    {% for currency in page.header.currencies.elements %}
-                                        {% if currency != page.header.activeCurrency %}
-                                            <li>{{ currency.isoCode }} - {{ currency.name }}</li>
-                                        {% endif %}
-                                    {% endfor %}
-                                </ul>
+                        <form method="post" action="{{ path('frontend.checkout.configure') }}" class="currency-form" data-form-auto-submit="true">
+
+                            {{ sw_csrf('frontend.checkout.configure') }}
+                            <span>
+                                {{ page.header.activeCurrency.isoCode }}
                             </span>
-                        {% endif %}
+                            <i class="fas fa-chevron-down"></i>
+
+                            <span class="emz_switch_box_menu">
+                                {% for currency in page.header.currencies.elements %}
+                                    {% if currency != page.header.activeCurrency %}
+                                        <label for="{{ currency.id }}">
+                                            <input id="{{ currency.id }}"
+                                                   class="top-bar-list-radio"
+                                                   value="{{ currency.id }}"
+                                                   name="languageId"
+                                                   type="radio">
+                                            {{ currency.isoCode }} - {{ currency.name }}
+                                        </label>
+                                    {% endif %}
+                                {% endfor %}
+                            </span>
+
+                            <input name="redirectTo" type="hidden" value="{{ app.request.get('_route') }}"/>
+
+                            {% for key, value in app.request.attributes.get('_route_params') %}
+                                <input name="redirectParameters[{{ key }}]" type="hidden" value="{{ value }}">
+                            {% endfor %}
+                        </form>
                     </li>
 
                     <li class="lang emz_switch_box">
-                        <span>
-                            {{ page.header.activeLanguage.name }}
-                        </span>
-                        {% if page.header.languages.elements|length > 1 %}
-                            <i class="fas fa-chevron-down"></i>
-                            <span class="emz_switch_box_menu">
-                                <ul>
+                        <form method="post" action="{{ path('frontend.checkout.switch-language') }}" class="language-form" data-form-auto-submit="true">
+
+                            {{ sw_csrf('frontend.checkout.switch-language') }}
+
+                            <span>
+                                {{ page.header.activeLanguage.name }}
+                            </span>
+                            {% if page.header.languages.elements|length > 1 %}
+                                <i class="fas fa-chevron-down"></i>
+                                <span class="emz_switch_box_menu">
                                     {% for language in page.header.languages.elements %}
                                         {% if language != page.header.activeLanguage %}
-                                            <li>{{ language.name }}</li>
+                                            <label for="{{ language.id }}">
+                                                <input id="{{ language.id }}"
+                                                       class="top-bar-list-radio"
+                                                       value="{{ language.id }}"
+                                                       name="languageId"
+                                                       type="radio">
+                                                {{ language.name }}
+                                            </label>
                                         {% endif %}
                                     {% endfor %}
-                                </ul>
-                            </span>
-                        {% endif %}
+                                </span>
+                            {% endif %}
+
+                            <input name="redirectTo" type="hidden" value="{{ app.request.get('_route') }}"/>
+
+                            {% for key, value in app.request.attributes.get('_route_params') %}
+                                <input name="redirectParameters[{{ key }}]" type="hidden" value="{{ value }}">
+                            {% endfor %}
+                        </form>
                     </li>
                 </ul>
                 <span id="emz_shopping_cart_big" class="emz_icon_wrapper">{% sw_include '@MarkusTheme/storefront/layout/header/emz_shopping_cart.html.twig' %}</span>
