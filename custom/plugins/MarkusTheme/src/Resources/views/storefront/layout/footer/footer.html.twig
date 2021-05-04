@@ -13,10 +13,19 @@
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <form class="form subscribe" method="post">
+                    <form name="newsletterRegister"
+                          class="form subscribe"
+                          method="post"
+                          action="{{ path("frontend.account.newsletter") }}"
+                          data-form-auto-submit="true"
+                          data-form-auto-submit-options='{{ formAutoSubmitOptions|json_encode }}'>
+
+                        {% block page_account_overview_newsletter_content_form_csrf %}
+                            {{ sw_csrf('frontend.account.newsletter') }}
+                        {% endblock %}
                         <div class="input-wrapper">
                             <i class="fas fa-envelope"></i>
-                            <input id="input-newsletter" placeholder="Email Address" type="email"/>
+                            <input id="input-newsletter" placeholder="Email Address" type="email" id="newsletterRegister"/>
                         </div>
                         <button id="btn-subscribe" type="submit">
                             <span>subscribe</span>
@@ -28,15 +37,15 @@
                 <div class="col-md-12 col-lg-2">
                     <div class="socialmedia-wrapper">
                         {% if shopware.theme.Facebook %}
-                            <span><a class="socialmedia-link" href="{{ shopware.theme.Facebook }}"><i class="fab fa-facebook-f"></i></a></span>
+                            <span><a class="socialmedia-link" href="{{ shopware.theme.Facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a></span>
                         {% endif %}
 
                         {% if shopware.theme.Twitter %}
-                            <span><a class="socialmedia-link" href="{{ shopware.theme.Twitter }}"><i class="fab fa-twitter"></i></a></span>
+                            <span><a class="socialmedia-link" href="{{ shopware.theme.Twitter }}" target="_blank"><i class="fab fa-twitter"></i></a></span>
                         {% endif %}
 
                         {% if shopware.theme.LinkedIn %}
-                            <span><a class="socialmedia-link" href="{{ shopware.theme.LinkedIn }}"><i class="fab fa-linkedin"></i></a></span>
+                            <span><a class="socialmedia-link" href="{{ shopware.theme.LinkedIn }}" target="_blank"><i class="fab fa-linkedin"></i></a></span>
                         {% endif %}
                     </div>
                 </div>
@@ -74,7 +83,7 @@
                             <p>
                                 <b>Email</b>
                                 <br>
-                                <a href="mailto:markusbiro@yahoo.de">{{ shopware.theme.Email }}</a>
+                                <a href="mailto:{{ shopware.theme.Email }}">{{ shopware.theme.Email }}</a>
                             </p>
                         </li>
                     </ul>

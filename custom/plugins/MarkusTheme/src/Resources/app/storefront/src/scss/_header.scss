@@ -28,17 +28,14 @@
     text-transform: none;
 }
 
-.emz_switch_box_menu ul {
-    padding: 0;
-    margin: 0;
-}
-
-
-.emz_switch_box_menu ul li {
+.emz_switch_box_menu label {
     padding: 5px;
+    margin: 0;
+    width: 100%;
+    cursor: pointer;
 }
 
-.emz_switch_box_menu ul li:hover {
+.emz_switch_box_menu label:hover {
     background-color: #e8e8e8;
 }
 

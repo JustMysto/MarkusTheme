@@ -165,23 +165,23 @@
 
     $(".currency").click(function() {
         $(".currency .emz_switch_box_menu").toggleClass("displayTrue");
-        $(".currency > i").toggleClass("fa-chevron-down");
-        $(".currency > i").toggleClass("fa-chevron-up");
+        $(".currency > form > i").toggleClass("fa-chevron-down");
+        $(".currency > form > i").toggleClass("fa-chevron-up");
         if ($(".lang .emz_switch_box_menu").hasClass("displayTrue")) {
             $(".lang .emz_switch_box_menu").toggleClass("displayTrue");
-            $(".lang > i").toggleClass("fa-chevron-down");
-            $(".lang > i").toggleClass("fa-chevron-up");
+            $(".lang > form > i").toggleClass("fa-chevron-down");
+            $(".lang > form > i").toggleClass("fa-chevron-up");
         }
     })
 
     $(".lang").click(function() {
         $(".lang .emz_switch_box_menu").toggleClass("displayTrue");
-        $(".lang > i").toggleClass("fa-chevron-down");
-        $(".lang > i").toggleClass("fa-chevron-up");
+        $(".lang > form > i").toggleClass("fa-chevron-down");
+        $(".lang > form > i").toggleClass("fa-chevron-up");
         if ($(".currency .emz_switch_box_menu").hasClass("displayTrue")) {
             $(".currency .emz_switch_box_menu").toggleClass("displayTrue");
-            $(".currency > i").toggleClass("fa-chevron-down");
-            $(".currency > i").toggleClass("fa-chevron-up");
+            $(".currency > form > i").toggleClass("fa-chevron-down");
+            $(".currency > form > i").toggleClass("fa-chevron-up");
         }
     })
 
